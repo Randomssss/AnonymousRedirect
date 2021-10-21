@@ -181,7 +181,26 @@
         if (redirectButton) {
             redirectButton.addEventListener('click', performRedirect);
         }
+		function translate(lang){
+		var webtitle='';
+		var languages;
+		$.ajax({url:"lang.json",async:false,success:function(result){console.log(result);languages = result;}});
+		$('[set-lan]').each(function(){
+		var me = $(this);
+		var a = me.attr('set-lan').split(':');
+		var p = a[0]; 
+		var m = a[1];
+		//languages = JSON.parse(languages);
+		webtitle = languages[lang]["title"];
+		var t = languages[lang];
+		if(t==undefined) return true; 
+		if(m=="text"||m=="footer"){me.context.firstChild.textContent = t[m];}
+		else
+		{me.html(t[m]);}});
+		document.title=webtitle;}
+		var lang = navigator.language||navigator.userLanguage;
+		document.firstElementChild.lang=lang
+		translate(lang);
     </script>
-
-    <body>
+</body>
 </html>
