@@ -91,27 +91,27 @@
 
 <body>
     <div class="main">
-        <h1 class="title">
+        <h1 set-lan="html:title" class="title">
             Anonymous redirect
         </h1>
 
-        <p class="text">
+        <p set-lan="html:text" class="text">
             You are about to go to the following page:
             <code id="currentUrl">https://example.org/</code>
         </p>
 
         <div class="wrap">
-            <button type="button" class="button" id="redirectButton">
+            <button set-lan="html:button" type="button" class="button" id="redirectButton">
                 Take me there
             </button>
         </div>
 
-        <footer>
+        <footer set-lan="html:footer">
             The point of this page is to hide the source page from the target website to prevent all kinds of tracking.
-            <a href="https://github.com/AdguardTeam/AnonymousRedirect" class="link" target="_blank">Source code</a>.
+            <a set-lan="html:link" href="https://github.com/AdguardTeam/AnonymousRedirect" class="link" target="_blank">Source code</a>.
         </footer>
     </div>
-    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.0/jquery.min.js"></script>
     <script type="text/javascript">
         if (!String.prototype.endsWith) {
             Object.defineProperty(String.prototype, 'endsWith', {
@@ -161,7 +161,7 @@
         var url = getParameterByName('url');
         var host = getHostname(document.referrer);
 
-        if (host === 'adguard.com' || host.endsWith('.adguard.com')) {
+        if (host === 'uim.im' || host.endsWith('.uim.im')) {
             performRedirect();
         }
 
