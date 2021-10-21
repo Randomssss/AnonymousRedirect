@@ -14,3 +14,6 @@ https://randomssss.github.io/AnonymousRedirect/redirect.html?url=[PUT URL HERE]
 ## Examples
 
 https://randomssss.github.io/AnonymousRedirect/redirect.html?url=https://whatsmyreferer.com/
+
+
+Add Chinese :D
